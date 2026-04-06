@@ -6,6 +6,8 @@ const path = require("path");
 const app = express();
 app.use(express.json());
 
+
+
 const router = require("./routes");
 app.use("/api", router);
 
