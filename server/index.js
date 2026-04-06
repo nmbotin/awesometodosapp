@@ -6,8 +6,6 @@ const path = require("path");
 const app = express();
 app.use(express.json());
 
-
-
 const router = require("./routes");
 app.use("/api", router);
 
@@ -23,7 +21,7 @@ const startServer = async () => {
   try {
     await connectToMongoDB();
     app.listen(port, () => {
-      console.log(`Server is listening on port http://localhost:${port}`);
+      console.log(`Server is listening on http://localhost:${port}`);
     });
   } catch (error) {
     console.error("Failed to start server:", error);
