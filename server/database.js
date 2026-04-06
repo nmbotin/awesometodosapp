@@ -1,6 +1,11 @@
 require("dotenv").config();
 const { MongoClient, ServerApiVersion } = require("mongodb");
-
+const dns = require('dns');
+try {
+  dns.setServers(['8.8.8.8','8.8.4.4','1.1.1.1']);
+} catch (error){
+  
+}
 const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/";
 
 const options = {

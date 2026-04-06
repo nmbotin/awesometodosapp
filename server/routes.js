@@ -1,8 +1,10 @@
 const express = require("express");
+
+// create an instance of our router
 const router = express.Router();
 const { getCollection } = require("./models/index");
-const { ObjectId } = require("mongodb");
 
+const { ObjectId } = require("mongodb");
 // GET /todos
 router.get("/todos", async (req, res) => {
     const collection = getCollection();
